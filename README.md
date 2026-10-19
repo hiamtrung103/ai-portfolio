@@ -1,6 +1,6 @@
 # Trung — AI & Software Portfolio
 
-A Vietnamese personal developer portfolio about AI, developer tools, and creative coding. Built with semantic HTML, responsive CSS, and vanilla JavaScript. No backend or API keys required. Ice-blue and periwinkle palette, light/dark themes, a projected 3D neural sphere, floating glass elements, and perspective project cards.
+An English personal developer portfolio about AI, developer tools, and creative coding. Built with semantic HTML, responsive CSS, and vanilla JavaScript. No backend or API keys required. Uses the standard Arial/Helvetica sans-serif font stack with no external font downloads. Ice-blue and periwinkle palette, light/dark themes, a projected 3D neural sphere, floating glass elements, and perspective project cards.
 
 ## Preview
 

@@ -7,7 +7,7 @@
     const dark = root.dataset.theme === 'dark';
     themeLabel.textContent = dark ? 'Dark' : 'Light';
     themeToggle.setAttribute('aria-pressed', String(dark));
-    themeToggle.setAttribute('aria-label', dark ? 'Chuyển sang giao diện sáng' : 'Chuyển sang giao diện tối');
+    themeToggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
     document.querySelector('meta[name="theme-color"]').content = dark ? '#09121f' : '#f3f8ff';
   }
   updateTheme();
@@ -23,7 +23,8 @@
   filters.forEach(button => button.addEventListener('click', () => {
     filters.forEach(item => { const active = item === button; item.classList.toggle('active', active); item.setAttribute('aria-pressed', String(active)); });
     projects.forEach(project => { project.hidden = button.dataset.filter !== 'all' && project.dataset.category !== button.dataset.filter; });
-    count.textContent = `${String(projects.filter(project => !project.hidden).length).padStart(2, '0')} dự án`;
+    const visibleCount = projects.filter(project => !project.hidden).length;
+    count.textContent = `${String(visibleCount).padStart(2, '0')} ${visibleCount === 1 ? 'project' : 'projects'}`;
   }));
   const canvas = document.querySelector('#neural');
   const context = canvas.getContext('2d');
