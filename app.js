@@ -21,21 +21,6 @@
   systemTheme.addEventListener('change', event => {
     if (savedTheme !== 'light' && savedTheme !== 'dark') applyTheme(event.matches ? 'dark' : 'light');
   });
-  const filters = [...document.querySelectorAll('[data-filter]')];
-  const projects = [...document.querySelectorAll('.project')];
-  const count = document.querySelector('#filter-count');
-  filters.forEach(button => button.addEventListener('click', () => {
-    filters.forEach(filter => {
-      const active = filter === button;
-      filter.classList.toggle('active', active);
-      filter.setAttribute('aria-pressed', String(active));
-    });
-    projects.forEach(project => {
-      project.hidden = button.dataset.filter !== 'all' && project.dataset.category !== button.dataset.filter;
-    });
-    const visible = projects.filter(project => !project.hidden).length;
-    count.textContent = visible + (visible === 1 ? ' project' : ' projects');
-  }));
   const sculpture = document.querySelector('.hero-sculpture');
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(entries => {
