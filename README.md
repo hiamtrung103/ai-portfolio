@@ -1,29 +1,32 @@
-# Trung — AI & Software Portfolio
+# Trung — Developer & curious mind
 
-An English personal developer portfolio about AI, developer tools, and creative coding. Built with semantic HTML, responsive CSS, and vanilla JavaScript. No backend or API keys required. Uses the standard Arial/Helvetica sans-serif font stack with no external font downloads. Ice-blue and periwinkle palette, light/dark themes, a projected 3D neural sphere, floating glass elements, and perspective project cards.
+An English personal developer portfolio about AI, developer tools, and creative coding.
 
-## Preview
+The design uses a quiet light-blue palette, standard Arial/Helvetica typography, a custom glass sculpture, and large project previews. Light and dark themes follow the system initially and remember a manual selection. Project filters and expandable technical notes work without a backend.
 
-```sh
-python -m http.server 4173
-```
+## Preview locally
 
-Open http://localhost:4173. The site includes project filters, expandable technical notes, and an original canvas neural-network illustration. The animation pauses off screen and respects reduced-motion preferences. The theme follows the system initially and saves a manual selection in local storage.
+Run: python -m http.server 4173
 
-## Hosting
-
-GitHub Pages: deploy the `main` branch from the repository root. All asset paths are relative, so both project URLs and custom domains work.
-
-Requested domain: `hiamtrung102.is-a.dev`.
-
-Registration uses CNAME `hiamtrung103.github.io`, with no NS delegation or Cloudflare Tunnel. After is-a.dev approves and merges the registration, configure the custom domain in GitHub Pages and enable HTTPS. Do not add a CNAME file before approval because it would redirect the working preview before DNS exists.
+Open http://localhost:4173.
 
 ## Editing
 
-- Text, projects, links, and notes: `index.html`
-- Layout and colors: `styles.css`
-- Light/dark palettes and 3D treatments: `theme.css`
-- Initial theme before first paint: `theme-init.js`
-- Project filters and illustration: `app.js`
+- Content, projects, and accessibility labels: index.html
+- Layout, responsive styles, and both themes: styles.css
+- Theme initialization before first paint: theme-init.js
+- Theme switching, project filters, and animation visibility: app.js
+- Original hero artwork: assets/glass-knot.png
 
-The project links point to existing public repositories. No testimonials, employment history, metrics, or qualifications have been invented. Project artwork is illustrative. The site is a personal, non-commercial developer portfolio, not an AI chatbot service.
+Motion respects prefers-reduced-motion. Navigation and controls are keyboard accessible. There are no external font dependencies or API keys. Project previews are illustrative; links point to existing public repositories.
+
+## Hosting and domain
+
+GitHub Pages publishes the repository root on main:
+https://hiamtrung103.github.io/ai-portfolio/
+
+Domain registration: https://github.com/is-a-dev/register/pull/57328
+
+Requested domain: hiamtrung102.is-a.dev, using CNAME hiamtrung103.github.io. Configure the GitHub Pages custom domain and HTTPS after the registration PR is merged. Until then, keep the GitHub Pages preview reachable without a CNAME file.
+
+This is a personal, non-commercial developer portfolio. No employment history, testimonials, metrics, or qualifications have been invented.
